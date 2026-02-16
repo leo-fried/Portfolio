@@ -125,7 +125,9 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .proj-description {
+    max-height: 60vh;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 .close-btn {
     position: absolute;
