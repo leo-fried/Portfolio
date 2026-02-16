@@ -1,12 +1,13 @@
 # Personal Portfolio Website
 
-##This is my personal portfolio website built using HTML, CSS, and JavaScript. It highlights my background, projects, resume, and provides a way to contact me.
+#### This is my personal portfolio website built using HTML, CSS, and JavaScript. It highlights my background, projects, resume, and provides a way to contact me.
 
 # Overview
 
 #### The website is designed to showcase my skills, experience, and work in a clean and responsive layout. It serves as a central place for recruiters, collaborators, and visitors to learn more about me and view my projects.
 
 # Sections
+
 ## About Me
 
 A brief introduction about who I am, my background, skills, and professional interests.
@@ -61,6 +62,7 @@ Present my projects in a professional format
 Provide an easy way for others to contact me
 
 # Photos
+
 ## Homepage 
 <img width="2548" height="1421" alt="image" src="https://github.com/user-attachments/assets/f30b86a4-83da-4e8f-ac4e-ec798755790a" />
 
