@@ -39,9 +39,12 @@
     flex-direction: column;
     align-items: center;
     margin: 20px;
+    width: 40%;
+    max-width: 30vw;
+    height: auto;
 }
 .project-name{
-    font-size: 22px;
+    font-size: 1.5vw;
     color: #444;
     text-align: center;
     margin-top: 0%;
@@ -53,6 +56,7 @@
 .project-image{
     display: block;
     width: 100%;
+    max-width: 30vw;
     height: auto;
     object-fit: cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
@@ -67,8 +71,8 @@
 
 .dots {
     position: absolute;
-    bottom: 12px;
-    left: 50%;
+    bottom: 1vh;
+    left: 15vw;
     transform: translateX(-50%);
     display: flex;
     gap: 12px;
@@ -81,6 +85,8 @@
 .dot{
     height: 12px;
     width: 12px;
+    max-width: 1vw;
+    max-height: 1vw;
     border-radius: 50%;
     display: inline-block;
     background: #d7d7d7;
@@ -117,6 +123,9 @@
     height: auto;
     margin-top: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.proj-description {
+    overflow-y: auto;
 }
 .close-btn {
     position: absolute;

@@ -34,7 +34,8 @@
     display: block;
     margin: 30px auto;
     width: 500px;
-    height: 500px;
+    max-width: fit-content;
+    height: auto;
     border-radius: 5%;
     object-fit: cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -47,12 +48,12 @@
     font-size: 25px;
     color: #444;
     text-align: left;
-    margin: 5% 30%;
+    margin: 5% 10%;
     font-family: 'Verdana', sans-serif;
     text-indent: 30px;
 }
 #note {
-    margin: 2.5% 15%;
+    margin: 2.5% 5%;
     text-indent: 0;
     text-align: center;
 }
