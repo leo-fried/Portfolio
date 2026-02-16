@@ -66,7 +66,7 @@ function mouseHover(proj, name){
  */
 function setSlide(i, proj, projdot1, projdot2, projdot3, num) {
     // Replace image
-    proj.src = `../../assets/images/proj/proj${num}_${i % 3}.png`;
+    proj.src = `../../../assets/images/proj/proj${num}_${i % 3}.png`;
     // Adjust dot
     switch(i % 3) {
         case 0:

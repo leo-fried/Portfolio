@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   container.addEventListener('click', (e) => {
     const btn = e.target.closest('.clickable');
     if (!btn) return;
-    if (btn.id === 'option0') window.location.href = '/src/screens/home/home.html';
+    if (btn.id === 'option0') window.location.href = '/index.html';
     if (btn.id === 'option1') window.location.href = '/src/screens/projects/projects.html';
     if (btn.id === 'option2') window.location.href = '/src/screens/resume/resume.html';
     if (btn.id === 'option3') window.location.href = '/src/screens/contact/contact.html';
