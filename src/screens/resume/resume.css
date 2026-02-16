@@ -1,0 +1,21 @@
+.title{
+    font-size: 50px;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Georgia', serif;
+}
+.subtitle{
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Arial', sans-serif;
+}
+.pdf-viewer{
+    display: block;
+    margin: 30px auto;
+    width: 80%;
+    height: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

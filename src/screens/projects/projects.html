@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leo Friedman Projects</title>
+    <link rel="stylesheet" href="./projects.css">
+    <script src="./projects.js" defer></script>
+    <link rel="stylesheet" href="../../toolbar/toolbar.css">
+</head>
+<body>
+    <div class="toolbar" id="toolbar-container"></div>
+    <!-- Keep Background out of body for highlighting -->
+    <div id="project-body">
+        <h2 class="title" id="projects-title">Projects</h2>
+        <h2 class="title" id="projects-subtitle">Here you can find a collection of my projects showcasing my skills and experience in various programming languages, technologies, and environments.</h2>
+        <div class="project-row" id="row1">
+            <div class="project-item">
+                <div class="project-image-wrapper">
+                    <img id="p1" class="project-image" src="../../assets/images/proj/proj1_0.png" alt="project 1">
+                    <div class="dots">
+                        <span id="p1dot1" class="dot active"></span>
+                        <span id="p1dot2" class="dot"></span>
+                        <span id="p1dot3" class="dot"></span>
+                    </div>
+                </div>
+                <div id="p1name" class="project-name">Champion Reads® Online Website</div>
+                <p id="p1description" class="project-description" style="display: none;">
+This project is a web companion for the Champion Reads® book series, which highlights athletes who have overcome adversity. The website and books are approved for use as classroom resources during instructional time because they align with the Indiana school curriculum.
+
+I contributed to the development of two games: “What Would You Do?” and “Eye Spy.” The first game asks users to respond to simple scenarios using the knowledge they gained from learning about each featured athlete. The second game challenges users to find relevant items in each athlete's childhood bedroom. Both games award points based on correctness and allow users to download a personalized report. They also incorporate generative AI image generation, customized to fit Champion Reads' unique environment.
+
+In addition to the games, I developed a VTT parsing algorithm that processes VTT files I created in English, Spanish, and French to provide live captions for the website's guided presentations. These captions support students who may not be able to play audio or who do not speak English.
+
+I also implemented various site-wide updates requested by the project owner, such as adding the District of Columbia to the Geography game and adjusting fonts and button colors.
+
+This project was built using HTML, CSS, and JavaScript.
+</p>
+            </div>
+            <div class="project-item">
+                <div class="project-image-wrapper">
+                    <img id="p2" class="project-image" src="../../assets/images/proj/proj2_0.png" alt="project 2">
+                    <div class="dots">
+                        <span id="p2dot1" class="dot active"></span>
+                        <span id="p2dot2" class="dot"></span>
+                        <span id="p2dot3" class="dot"></span>
+                    </div>
+                </div>
+                <div id="p2name" class="project-name">Information Technology Help Desk Application</div>
+                <p id="p2description" class="project-description" style="display: none;">This C# project is an IT Help Desk website designed to manage support tickets with a functional login page and ticketing system that connects to a MySQL database. Users can submit, view, and track the status of their IT issues, while help desk agents can manage and resolve tickets. The project emphasizes collaboration within a team of five developers, providing hands-on experience in version control, task delegation, and software design principles. By integrating backend database functionality and user authentication, the project enhances my skills in full-stack development, database management, and team-based software engineering and this project can be found on my Butler Github.</p>
+            </div>
+        </div>
+        <div class="project-row" id="row2">
+            <div class="project-item">
+                <div class="project-image-wrapper">
+                    <img id="p3" class="project-image" src="../../assets/images/proj/proj3_0.png" alt="project 3">
+                    <div class="dots">
+                        <span id="p3dot1" class="dot active"></span>
+                        <span id="p3dot2" class="dot"></span>
+                        <span id="p3dot3" class="dot"></span>
+                    </div>
+                </div>
+                <div id="p3name" class="project-name">Command Line Shape Jumper Game</div>
+                <p id="p3description" class="project-description" style="display: none;">
+A Linux console version of Geometry Dash inspired by RobTop Games. Shape Jumper challenges players to complete rhythm-based obstacle levels with precision and timing, all within a terminal interface.
+
+I developed this game engine from the ground up using C++, focusing on clean game logic and lightweight dependencies. To enhance the user experience, I integrated ncurses for terminal UI rendering and SFML for audio playback, delivering an engaging interactive experience without graphical assets.
+
+Key features include:
+
+Authentic rhythm-platformer gameplay adapted for a text-based interface
+
+Automatic progress saving and level persistence
+
+Debug and help runtime flags for enhanced testing and accessibility
+
+Built for Linux environments with make, this project improved my skills in game architecture, systems programming, and cross-platform tooling. Source code is available on GitHub, and prebuilt binaries are provided for easy installation and testing.
+
+Tech stack: C++, ncurses, SFML, Makefile
+Scope: Solo development, full game engine implementation
+</p>
+            </div>
+        </div>
+    </div>
+    <!-- Highlighted project section (Hidden by default, becomes visable upon)-->
+    <div id="project-highlight" class="highlight" style="display: none;">
+        <h2 id="proj-title" class="proj-title"></h2>
+        <img id="proj-image" class="proj-image" src="" alt="Project Image">
+        <p id="proj-description" class="proj-description"></p>
+        <button id="close-btn" class="close-btn">❌</button>
+    </div>
+    <script type="module" src="../../toolbar/toolbar.js" defer></script>
+</body>
+</html>
