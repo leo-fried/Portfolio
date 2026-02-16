@@ -6,14 +6,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   container.addEventListener('click', (e) => {
     const btn = e.target.closest('.clickable');
     if (!btn) return;
-    if (btn.id === 'option0') window.location.href = '/index.html';
-    if (btn.id === 'option1') window.location.href = '/src/screens/projects/projects.html';
-    if (btn.id === 'option2') window.location.href = '/src/screens/resume/resume.html';
-    if (btn.id === 'option3') window.location.href = '/src/screens/contact/contact.html';
+    if (btn.id === 'option0') window.location.href = '/Portfolio/index.html';
+    if (btn.id === 'option1') window.location.href = '/Portfolio/src/projects/projects.html';
+    if (btn.id === 'option2') window.location.href = '/Portfolio/src/resume/resume.html';
+    if (btn.id === 'option3') window.location.href = '/Portfolio/src/contact/contact.html';
   });
 
   try {
-    const fragmentUrl = new URL('./toolbar.html', import.meta.url); // requires module script
+    const fragmentUrl = new URL('/Portfolio/toolbar/toolbar.html', import.meta.url); // requires module script
     const res = await fetch(fragmentUrl);
     if (!res.ok) throw new Error(`Toolbar load failed: ${res.status}`);
     container.innerHTML = await res.text();
