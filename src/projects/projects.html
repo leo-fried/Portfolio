@@ -79,6 +79,115 @@ Built for Linux environments with make, this project improved my skills in game 
 Tech stack: C++, ncurses, SFML, Makefile
 Scope: Solo development, full game engine implementation
 </p>
+        <div class="project-item">
+                <div class="project-image-wrapper">
+                    <img id="p4" class="project-image" src="/Portfolio/assets/images/proj/proj4_0.png" alt="project 4">
+                    <div class="dots">
+                        <span id="p4dot1" class="dot active"></span>
+                        <span id="p4dot2" class="dot"></span>
+                        <span id="p4dot3" class="dot"></span>
+                    </div>
+                </div>
+                <div id="p4name" class="project-name">C++ Linux HTTP File-server</div>
+                <p id="p4description" class="project-description" style="display: none;">
+I built a lightweight HTTP/1.1 file server in C++ to explore low-level networking, asynchronous I/O, and event-driven system design. The server uses Linux's epoll interface to efficiently handle multiple concurrent client connections without relying on threads or external frameworks.
+
+The project implements core HTTP functionality from scratch, including request parsing, routing, response generation, and persistent connections. It serves static files from a configurable root directory and includes several safeguards and performance features commonly found in production servers.
+
+Key Features
+
+1. Full HTTP/1.1 request parsing
+
+2. Support for GET, POST, PUT, and DELETE
+
+3. epoll-based I/O multiplexing for handling concurrent connections
+
+4. Persistent Keep-Alive connections
+
+5. Automatic MIME type detection
+
+6. Graceful error handling for common HTTP errors (400, 404, 405, 409, 413, 415, 500)
+
+7. Protection against directory traversal attacks
+
+8. Support for partial reads and writes for large requests
+
+9. Configurable server settings through an external configuration file
+
+Architecture
+
+1. The server follows an asynchronous event-driven architecture built around an epoll event loop.
+ 
+2. epoll_wait() monitors all active file descriptors.
+ 
+3. When events occur, the server processes ready connections.
+ 
+4. New clients are accepted and registered with epoll.
+ 
+5. Existing connections progress through a request-handling state machine.
+
+Each client connection transitions through the following states:
+
+1. Receiving request headers
+
+2. Receiving request body
+
+3. Building the response
+
+4. Sending response headers
+
+5. Sending response body
+
+6. Closing or resetting the connection (for Keep-Alive)
+
+This design allows the server to efficiently handle many connections without blocking or spawning additional threads.
+
+Request Lifecycle
+
+A typical request flows through the following pipeline:
+
+Client → Accept Connection → Parse Request → Validate → Access Filesystem → Build Response → Send Response → Close or Keep Alive
+
+System Design
+
+The server is organized into modular layers that separate responsibilities:
+
+Server Layer:
+
+Loads configuration, initializes networking and epoll, runs the event loop, tracks connection state, cleans up idle clients
+
+Handler:
+
+Acts as the coordination layer between request parsing and routing. It validates paths and constructs HTTP responses.
+
+Parser:
+
+Responsible for parsing HTTP requests, including the request line headers and request body. It also validates formatting, extracts headers, determines content length, and stores request bodies safely.
+
+Router:
+
+Handles filesystem interaction and request routing, including path validation, file reading/writing determining response content type
+
+Configuration:
+
+Server behavior can be customized using an external configuration file without recompiling the program. Supported options include server port, root directory, buffer sizes, maximum header and body sizes, maximum queued connections, epoll event limits, connection timeout settings
+
+Technologies
+
+C++23
+
+Linux networking APIs
+
+epoll
+
+TCP sockets
+
+HTTP/1.1 protocol
+
+Motivation
+
+This project was built to better understand how real web servers manage concurrent connections and process HTTP requests. By implementing a server from scratch using low-level Linux networking primitives, I gained practical experience with event-driven systems, socket programming, and network protocol design.
+</p>
             </div>
         </div>
     </div>
